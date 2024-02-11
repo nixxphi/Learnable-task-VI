@@ -21,14 +21,19 @@ form.addEventListener('submit', (event) => {
 
   if (visaRegex.test(cardNumber)) {
     message = "Credit Card Type: Visa. Just upgrade to MasterCard, it's time to level up.";
+    console.log(message);
   } else if (expressAmericaRegex.test(cardNumber)) {
     message = "Credit Card Type: American Express. Wetin OG like you dey find here??";
+    console.log(message);
   } else if (mastercardRegex.test(cardNumber)) {
     message = "Credit Card Type: Mastercard. I greet you, Boss.";
+    console.log(message);
   } else if (verveRegex.test(cardNumber)) {
     message = "Credit Card Type: Verve. Try to upgrade to Visa or Mastercard, you're not a student.";
+    console.log(message);
   } else {
     message = "Invalid Card";
+    console.log(message);
   }
 
   message += '<br>'; // Adding line break to reduce the clutter
@@ -37,6 +42,7 @@ form.addEventListener('submit', (event) => {
     message += "CVV received";
   } else {
     message += "Invalid cvv number. You no go like try again??";
+    console.log(message);
   }
 
   resultDiv.innerHTML = message;
